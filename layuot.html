@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+html{
+    height: 100%;
+}
+
+        header, footer, #side-menu section {
+    padding: 4px; margin: 2px;
+    border: 2px solid blue;
+}
+#content div, #side-menu section {
+    padding: 4px; margin: 2px;
+    border: 2px solid red;
+}
+#side-menu section {
+    border: 2px solid green;
+}   
+
+body{
+    margin: 0; min-height: 100%;
+    display: flex; flex-direction: column;
+}
+header,body > section{
+    flex: 4;
+    
+}
+#content {
+    flex: 4;
+    display: flex; flex-direction: row;
+    
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+#side-menu { flex: 1; }
+#main { flex: 3; }
+#footer {
+    max-height: 20px;
+}     
+    </style>
+</head>
+<body>
+    <header>
+        Header
+    </header>
+    <section id="content">
+        <div id="side-menu">
+            <section>Menu 1</section>
+            <section>Menu 2</section>
+        </div>
+        <div id="main">Main Content</div>
+    </section>
+    <footer>
+        Footer
+    </footer>
+    </footer>
+</body>
+</html>
