@@ -8,7 +8,6 @@ function hide(id){
         console.error("elementul un exista");
     }
 }
-
 function showHome () {
     document.getElementById('home'). style.display = '';
     hide('skills');
@@ -34,6 +33,6 @@ function showLanguages() {
     document.getElementById('languages'). style.display = '';
     hide('home');
     hide('projects')
-    hide('skills')
-    
+    hide('skills')  
 }
+
