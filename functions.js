@@ -8,31 +8,31 @@ function hide(id){
         console.error("elementul un exista");
     }
 }
-function showHome () {
-    document.getElementById('home'). style.display = '';
+
+function hideAllPages (){
     hide('skills');
-    hide('languages')
-    hide('projects')
+    hide('languages');
+    hide('projects');
+    hide('home');
+}
+
+function showHome () {
+    hideAllPages ();
+    document.getElementById('home'). style.display = '';
 }
 
 function showSkills() {
+    hideAllPages ();
     document.getElementById('skills'). style.display = '';   
-    hide('home');
-    hide('projects')
-    hide('languages')
 }
-
+``
 function showProjacts() {
+    hideAllPages ();
     document.getElementById('projects'). style.display = '';
-    hide('home');
-    hide('skills')
-    hide('languages')
 }
 
 function showLanguages() {
+    hideAllPages ();
     document.getElementById('languages'). style.display = '';
-    hide('home');
-    hide('projects')
-    hide('skills')  
 }
 
