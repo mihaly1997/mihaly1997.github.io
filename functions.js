@@ -1,19 +1,11 @@
 
-function hide(id){
-    // document.getElementById(id). style.display = 'none';
-    var el = document.getElementById(id);
-    if (el){
-        el.style.display= 'none';
-    } else{
-        console.error("elementul un exista");
-    }
-}
-
 function hideAllPages (){
-    hide('skills');
-    hide('languages');
-    hide('projects');
-    hide('home');
+    var page = document.querySelectorAll(".page");
+    for (var i = 0; i < page.length; i++) {
+        var page = page[i];
+        console.info('i +', i, page [i])
+        hide(id)
+    }
 }
 
 function showHome () {
