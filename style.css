@@ -21,8 +21,9 @@ body{
 
 #top-menu-bar a{ 
     text-decoration: none;
-    padding: 0 15px 0 15px;
+    padding: 5px 15px 5px 15px;
     color: #fff;
+    display: inline-block;
 }
 
 #top-menu-bar a:visited{
@@ -31,6 +32,7 @@ body{
 #top-menu-bar a:hover{
     color: #334455;
      background: #fff;
+
     }
 
 .page{
@@ -66,7 +68,11 @@ body{
     display: flex; 
     flex-direction: column;
 }
-header,body > section{
+ header {
+     flex: 1;
+ }
+
+body > section{
     flex: 4;
     
 }
@@ -75,19 +81,16 @@ header,body > section{
     display: flex; flex-direction: row;
     position: relative;
     left: 30px;
-    top: 30px;
 }
 #side-menu { 
     padding: 10px;
     flex: 1;
  }
 #main { flex: 4; }
-#footer {
+footer {
     max-height: 20px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    text-align: center;
 } 
 h1, #name{
     text-align: center;
