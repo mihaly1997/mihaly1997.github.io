@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <div class="page">
+        <div class="pages">
             <h1>CV</h1>
         
             <h2 id="name">Mihaly Kadar</h2>
@@ -19,10 +19,10 @@
             <p id="job" >Wed Developer, Design </p>
         </div>
             <ul id="top-menu-bar">
-                <li><a href="#" onclick="showHome()">HOME</a></li>
-                <li><a href="#" onclick="showSkills()">Skills</a></li>
-                <li><a href="#" onclick="showProjacts() ">Projects</a></li>
-                <li><a href="#" onclick="showLanguages()">Languages</a></li>
+                <li><a href="#" onclick="showPage('home')">HOME</a></li>
+                <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+                <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+                <li><a href="#" onclick="showPage('languages')">Languages</a></li>
             </ul>
     </header>
 
@@ -45,11 +45,11 @@
         </div>
     
         <div id="main">
-            <div id="home" class="page">
+            <div id="home" class="pages">
                 <h2>Home</h2>
 
             </div>
-            <div id="skills" class="page" style="display: none;"> 
+            <div id="skills" class="pages" style="display: none;"> 
                 <h2>Skills & Endorcements</h2>
         
                 <ul>
@@ -61,11 +61,11 @@
                 </ul>
             </div>
 
-            <div id="projects" class="page" style="display: none;">
+            <div id="projects" class="pages" style="display: none;">
                 <H2>Projects</H2>
             </div>
 
-            <div id="languages" class="page" style="display: none;">
+            <div id="languages" class="pages" style="display: none;">
                 <h2>Known Languages</h2>
             
                 <table border="1">

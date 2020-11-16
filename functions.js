@@ -1,30 +1,21 @@
-
-function hideAllPages (){
-    var page = document.querySelectorAll(".page");
-    for (var i = 0; i < page.length; i++) {
-        var page = page[i];
-        console.info('i +', i, page [i])
-        hide(id)
+function hide (id){
+    var el = document.getElementById(id);
+    console.info
+    if (el) {
+        el.style.display = "none"
     }
 }
 
-function showHome () {
-    hideAllPages ();
-    document.getElementById('home'). style.display = '';
+function hideAllPages (){
+    var pages = document.querySelectorAll(".pages");
+    for (var i = 0; i < pages.length; i++) {
+        var page = pages[i];
+        var id = page.id;
+        hide(id);
+    }
 }
 
-function showSkills() {
+function showPage(pageId) {
     hideAllPages ();
-    document.getElementById('skills'). style.display = '';   
+    document.getElementById(pageId). style.display = '';
 }
-``
-function showProjacts() {
-    hideAllPages ();
-    document.getElementById('projects'). style.display = '';
-}
-
-function showLanguages() {
-    hideAllPages ();
-    document.getElementById('languages'). style.display = '';
-}
-

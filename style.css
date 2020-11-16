@@ -35,7 +35,7 @@ body{
 
     }
 
-.page{
+.pages{
     background-color: #fff;
     padding: 24px;
     box-shadow:0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
@@ -69,7 +69,7 @@ body{
     flex-direction: column;
 }
  header {
-     flex: 1;
+     /* flex: 1; */
  }
 
 body > section{
