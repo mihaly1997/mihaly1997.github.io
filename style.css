@@ -7,6 +7,14 @@ body{
     text-align: center;
 }
 
+#name{
+    
+}
+
+#img{
+
+}
+
 #top-menu-bar{
     text-align: center;
     color: #fff;
@@ -35,7 +43,7 @@ body{
 
     }
 
-.pages{
+.page{
     background-color: #fff;
     padding: 24px;
     box-shadow:0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);

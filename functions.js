@@ -7,7 +7,7 @@ function hide (id){
 }
 
 function hideAllPages (){
-    var pages = document.querySelectorAll(".pages");
+    var pages = document.querySelectorAll(".page");
     for (var i = 0; i < pages.length; i++) {
         var page = pages[i];
         var id = page.id;
@@ -19,3 +19,17 @@ function showPage(pageId) {
     hideAllPages ();
     document.getElementById(pageId). style.display = '';
 }
+
+function initMenu() {
+    document.addEventListener("click", function(e){
+        var link = e.target; 
+        if(link.matches("#top-menu-bar a")){
+            var id =link.innerHTML.toLowerCase();
+            console.info("click", id, link )
+            showPage(id)
+        }
+        
+    })
+}
+
+initMenu();
