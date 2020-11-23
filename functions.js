@@ -37,11 +37,6 @@ initMenu();
 
 showPage(activePage);
 
-var skills = [ 
-    { name: "HTML", endorsements: 15 },
-    { name: "CSS", endorsements: 20 },
-    { name:"JS", endorsements: 10 }
-];
 
 function showSkills(skills){
     var skillsLi =skills.map(function(skill){
@@ -54,6 +49,13 @@ function showSkills(skills){
     var ul = document.querySelector("#skills ul")
     ul.innerHTML = skillsLi.join("")
 }
+ 
+fetch("date/skills.json").then(function(r) {
+    return r.json();
 
-showSkills(skills);
+}).then(function(skills){
+    showSkills(skills);
+});
+
+
 
