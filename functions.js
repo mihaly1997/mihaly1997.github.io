@@ -1,3 +1,5 @@
+var activePage = "home"
+
 function hide (id){
     var el = document.getElementById(id);
     console.info
@@ -6,18 +8,15 @@ function hide (id){
     }
 }
 
-function hideAllPages (){
-    var pages = document.querySelectorAll(".page");
-    for (var i = 0; i < pages.length; i++) {
-        var page = pages[i];
-        var id = page.id;
-        hide(id);
-    }
+function hidePreviousPage(){
+    hide (activePage)
 }
 
 function showPage(pageId) {
-    hideAllPages ();
+    // hideAllPages ();
+    hidePreviousPage();
     document.getElementById(pageId). style.display = '';
+    activePage = pageId;
 }
 
 function initMenu() {
@@ -25,8 +24,7 @@ function initMenu() {
         var link = e.target; 
         if(link.matches("#top-menu-bar a")){
             var id =link.innerHTML.toLowerCase();
-            console.info("click", id, link )
-            showPage(id)
+            showPage(id);
         }
         
     })
@@ -34,7 +32,7 @@ function initMenu() {
 
 initMenu();
 
-showPage("skills");
+showPage(activePage);
 
 var skills = [ "HTML", "CSS", "JS"];
 
@@ -45,5 +43,4 @@ var skillsLi =skills.map(function(skill){
 
 
 var ul = document.querySelector("#skills ul")
-ul.innerHTML = skillsLi.join("");
-
+ul.innerHTML = "<li>"+skills[0]+"</li> <li>"+skills[1]+"</li> <li>"+skills[2]+"</li>"
