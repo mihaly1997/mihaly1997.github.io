@@ -39,16 +39,21 @@ showPage(activePage);
 
 var skills = [ 
     { name: "HTML", endorsements: 15 },
-    { name: "CSS", endorsements: 15 },
+    { name: "CSS", endorsements: 20 },
     { name:"JS", endorsements: 10 }
 ];
 
-var skillsLi =skills.map(function(skill){
-    var endorsements = `<span>&middot; ${skill.endorsements}</span>`;
-    return "<li>" + skill.name + endorsements + "</li>";
+function showSkills(skills){
+    var skillsLi =skills.map(function(skill){
+        var endorsements = `<span>&middot; ${skill.endorsements}</span>`;
+        return "<li>" + skill.name + endorsements + "</li>";
+    
+    });
+    
+    
+    var ul = document.querySelector("#skills ul")
+    ul.innerHTML = skillsLi.join("")
+}
 
-});
+showSkills(skills);
 
-
-var ul = document.querySelector("#skills ul")
-ul.innerHTML = skillsLi.join("")
