@@ -44,6 +44,10 @@ body{
 
     }
 
+#skills li span{
+    color: #334455;
+}
+
 .page{
     background-color: #fff;
     padding: 24px;

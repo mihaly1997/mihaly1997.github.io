@@ -1,4 +1,4 @@
-var activePage = "home"
+var activePage = "skills"
 
 function hide (id){
     var el = document.getElementById(id);
@@ -18,7 +18,7 @@ function showPage(pageId) {
     hidePreviousPage();
     document.getElementById(pageId). style.display = '';
     var link = document.querySelector(`#top-menu-bar a[data-page="${pageId}"]`)
-     link.classList.add("active")
+    link.classList.add("active")
     activePage = pageId;
 }
 
@@ -37,13 +37,18 @@ initMenu();
 
 showPage(activePage);
 
-var skills = [ "HTML", "CSS", "JS"];
+var skills = [ 
+    { name: "HTML", endorsements: 15 },
+    { name: "CSS", endorsements: 15 },
+    { name:"JS", endorsements: 10 }
+];
 
 var skillsLi =skills.map(function(skill){
-    return "<li>" + skill + "</li>";
+    var endorsements = `<span>&middot; ${skill.endorsements}</span>`;
+    return "<li>" + skill.name + endorsements + "</li>";
 
 });
 
 
 var ul = document.querySelector("#skills ul")
-ul.innerHTML = "<li>"+skills[0]+"</li> <li>"+skills[1]+"</li> <li>"+skills[2]+"</li>"
+ul.innerHTML = skillsLi.join("")
