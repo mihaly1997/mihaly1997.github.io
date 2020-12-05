@@ -7,19 +7,39 @@ body{
     text-align: center;
 }
 
-#name{
-    
-}
+.header-right {
+    float: none;
+  }
 
-#img{
 
-}
+header a.logo {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px 50px ;
+  }
+
+  header a {
+    float: left;
+    color:#505F73;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 40px;
+  }
+
+  header {
+    overflow: hidden;
+    background-color:#505F73 ;
+    padding: 20px 10px;
+  }
 
 #top-menu-bar{
     text-align: center;
     color: #fff;
     text-align: center;
-    background-color: #334455;
+    background-color:#505F73;
+    float: right;
     }
 
 #top-menu-bar li{ 
@@ -39,13 +59,13 @@ body{
 }
 #top-menu-bar a:hover,
 #top-menu-bar a.active{
-    color: #334455;
+    color: #343c44;
      background: #fff;
 
     }
 
 #skills li span{
-    color: #334455;
+    color: #056CF2;
 }
 
 .page{
@@ -81,9 +101,6 @@ body{
     display: flex; 
     flex-direction: column;
 }
- header {
-     /* flex: 1; */
- }
 
 body > section{
     flex: 4;
@@ -104,7 +121,7 @@ footer {
     max-height: 20px;
     padding: 10px;
     text-align: center;
-    background-color: #334455;
+    background-color: #505F73;
 } 
 
 a{
@@ -112,12 +129,22 @@ a{
     ;
 }
 
-h1, #name{
-    text-align: center;
+.mid-info p {
+    margin: 0px;
+    font-size: 15px;
+    
 }
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.mid-info {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.top-info h1  {
+    margin: 0px;
+}
+
+#img img {
+    border-radius: 50%;
+    
+}

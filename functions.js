@@ -1,4 +1,4 @@
-var activePage = "skills"
+var activePage = "home"
 
 function hide (id){
     var el = document.getElementById(id);
@@ -44,7 +44,6 @@ function showSkills(skills){
         return "<li>" + skill.name + endorsements + "</li>";
     
     });
-    
     
     var ul = document.querySelector("#skills ul")
     ul.innerHTML = skillsLi.join("")
