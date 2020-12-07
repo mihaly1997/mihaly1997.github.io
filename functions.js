@@ -40,11 +40,11 @@ showPage(activePage);
 
 function getHTMLSkills(skills) {
     
-    return skills.map(skill => {
-        return `<li class="${skill.endorsements > 9 ? "favorite" : ""}">
+    return skills.map(skill => 
+        `<li class="${skill.endorsements > 9 ? "favorite" : ""}">
             ${skill.name} <span>&middot; ${skill.endorsements}</span>
-        </li>`;
-    }).join("");
+        </li>`
+    ).join("");
 }
 
 function showSkills(skills){
@@ -53,13 +53,12 @@ function showSkills(skills){
 }
  
 fetch("date/skills.json")
-.then(r => {
-    return r.json();
-})
+.then(r =>  r.json()
+)
 .then((skills) =>{
-    skills.sort((s1, s2) => {
-        return s1.endorsements > s2.endorsements ? -1 : 1;
-    });
+    skills.sort((s1, s2) => 
+         s1.endorsements > s2.endorsements ? -1 : 1
+    );
 
     showSkills(skills);
 });
