@@ -14,39 +14,19 @@ function hidePreviousPage(){
     link.classList.remove("active")
 }
 
-function showPage(pageId) {
-    hidePreviousPage();
-    document.getElementById(pageId). style.display = '';
-    var link = document.querySelector(`#top-menu-bar a[data-page="${pageId}"]`)
-    link.classList.add("active")
-    activePage = pageId;
-}
-
-function initMenu() {
-    document.addEventListener("click", function(e){
-        var link = e.target; 
-        if(link.matches("#top-menu-bar a")){
-            var id =link.getAttribute("data-page");
-            showPage(id);
-        }
-        
-    })
-}
-
-initMenu();
-
-showPage(activePage);
-
-
-function showSkills(skills){
+function getHTMLSkills(skills) {
     var skillsLi =skills.map(function(skill){
         var endorsements = `<span>&middot; ${skill.endorsements}</span>`;
         return "<li>" + skill.name + endorsements + "</li>";
     
     });
-    
-    var ul = document.querySelector("#skills ul")
-    ul.innerHTML = skillsLi.join("")
+    return skillsLi.join("");
+}
+
+function showSkills(skills){
+   var html = getHTMLSkills(skills);
+    var ul = document.querySelector("#skills ul");
+    ul.innerHTML = html;
 }
  
 fetch("date/skills.json").then(function(r) {
